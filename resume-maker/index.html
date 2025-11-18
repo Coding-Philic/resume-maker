@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Theme file -->
+    <link id="theme-style" rel="stylesheet" href="modern.css">
+</head>
+
+<body>
+    <h1>Resume Builder</h1>
+
+    <div class="container">
+
+        <!-- LEFT FORM -->
+        <div class="form-section">
+            <h2>Enter Your Details</h2>
+
+            <label>Upload Photo</label>
+            <input type="file" id="photoInput">
+
+            <label>Name</label>
+            <input type="text" id="nameInput">
+
+            <label>Email</label>
+            <input type="text" id="emailInput">
+
+            <label>Phone</label>
+            <input type="text" id="phoneInput">
+
+            <label>LinkedIn</label>
+            <input type="text" id="linkedinInput">
+
+            <label>GitHub</label>
+            <input type="text" id="githubInput">
+
+            <h3>Add Sections</h3>
+            <button onclick="addSection()">+ Add Section</button>
+            <div id="dynamicSections"></div>
+
+            <h3>Choose Resume Format</h3>
+            <select id="themeSelector" onchange="changeTheme()">
+                <option value="modern.css">Modern</option>
+                <option value="classic.css">Classic</option>
+            </select>
+            <button id="downloadPDF">Download PDF</button>
+        </div>
+
+        <!-- RESUME PREVIEW -->
+        <div class="preview-section">
+            <div id="resumePreview">
+
+                <img id="previewPhoto" src="assets/default-photo.png">
+
+                <h2 id="previewName"></h2>
+                <p id="previewEmail"></p>
+                <p id="previewPhone"></p>
+                <p id="previewLinkedin"></p>
+                <p id="previewGithub"></p>
+
+
+                <div id="previewSections"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PDF CDN’S -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

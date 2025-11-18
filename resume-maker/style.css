@@ -1,0 +1,185 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form Section */
+.form-section {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 450px;
+}
+
+.form-section h2,
+.form-section h3 {
+  color: #34495e;
+  margin-bottom: 15px;
+  letter-spacing: 0.6px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+  margin-top: 15px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.4);
+}
+
+button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: #1c5980;
+}
+
+/* Resume Preview Section */
+.preview-section {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#resumePreview {
+  width: 100%;
+}
+
+#previewPhoto {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2980b9;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.4);
+}
+
+#previewName {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#previewEmail,
+#previewPhone,
+#previewLinkedin,
+#previewGithub {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+#downloadPDF {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+#previewSections {
+  margin-top: 30px;
+}
+
+/* Dynamic Sections styling */
+#dynamicSections > div {
+  background-color: #f1f4f8;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-top: 15px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .form-section,
+  .preview-section {
+    max-width: 100%;
+  }
+}
