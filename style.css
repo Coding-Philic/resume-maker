@@ -1,4 +1,4 @@
-/* Reset */
+/* Base Reset & Typography */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,103 +7,152 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  background: #121212;
+  color: #e0e0e0;
   line-height: 1.6;
   min-height: 100vh;
-  padding: 25px 15px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Heading */
 h1 {
-  font-weight: 700;
-  font-size: 2.3rem;
-  color: #2c3e50;
-  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: #81ecec;
+  margin-bottom: 30px;
   text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 8px rgba(129, 236, 236, 0.75);
 }
 
-/* MAIN GRID — Desktop */
+/* Container Grid */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
   width: 100%;
   max-width: 1150px;
+  background: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(129, 236, 236, 0.2);
+  padding: 40px;
 }
 
-/* FORM */
+/* Form Section */
 .form-section {
-  background: #ffffff;
-  padding: 28px 25px;
-  border-radius: 15px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  max-width: 450px;
+  background: #222;
+  padding: 32px 28px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(129, 236, 236, 0.15);
+  max-width: 480px;
   width: 100%;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #3ddddd55;
+}
+.form-section:hover {
+  box-shadow: 0 0 30px rgba(129, 236, 236, 0.35);
 }
 
+/* Titles */
 .form-section h2,
 .form-section h3 {
-  margin-bottom: 15px;
-  color: #34495e;
+  margin-bottom: 18px;
+  color: #58e6e6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(88, 230, 230, 0.6);
 }
 
+/* Labels */
 label {
   font-weight: 600;
-  margin-top: 14px;
+  margin-top: 18px;
   display: block;
+  color: #a0e6e6cc;
+  font-size: 1.05rem;
 }
 
+/* Inputs and Select */
 input[type="text"],
 input[type="file"],
 select {
   width: 100%;
-  padding: 11px 13px;
-  border-radius: 8px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  font-size: 1rem;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-top: 7px;
+  border: 1.5px solid #3ddddd88;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  background: #262626;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-shadow: inset 0 0 6px #3ddddd44;
+}
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #00f0f0;
+  background: #1a1a1a;
+  outline: none;
+  box-shadow: 0 0 12px #00f0f0aa;
+  color: #defaf9;
 }
 
-/* BUTTON */
+/* Button */
 button {
-  padding: 12px 18px;
-  border-radius: 8px;
-  background: #2980b9;
-  color: #fff;
-  font-size: 1.1rem;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #00d8d8, #00a6a6);
+  color: #e0f7f7;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-top: 12px;
+  margin-top: 18px;
   cursor: pointer;
   border: none;
+  box-shadow: 0 0 10px #00e4e4aa;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 5px #00ffffcc;
+}
+button:hover {
+  background: linear-gradient(45deg, #00a6a6, #00d8d8);
+  box-shadow: 0 0 20px #00ffffdd;
 }
 
-/* PREVIEW */
+/* Preview Section */
 .preview-section {
-  background: #ffffff;
-  padding: 30px 28px;
-  border-radius: 15px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  background: #222;
+  padding: 36px 32px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  max-width: 680px;
   width: 100%;
-  max-width: 650px;
+  user-select: none;
+  border: 1px solid #00cccc44;
 }
 
 #previewPhoto {
-  width: 135px;
-  height: 135px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
-  border: 3px solid #2980b9;
+  border: 4px solid #00e0e0;
   object-fit: cover;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 22px auto;
+  filter: drop-shadow(0 0 10px #00cccccc);
 }
 
 #previewName {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 8px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffffaa;
 }
 
 #previewEmail,
@@ -111,87 +160,82 @@ button {
 #previewLinkedin,
 #previewGithub {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #555;
+  color: #66dcdc;
   word-break: break-word;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 2px #33bbbbcc;
 }
 
 #previewSections {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 #dynamicSections > div {
-  background: #f1f4f8;
-  padding: 12px 15px;
-  border-radius: 10px;
-  margin-top: 15px;
+  background: #00333311;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-shadow: inset 0 0 8px #00cccc22;
+  border: 1px solid #00bbbb44;
 }
 
-/* ---------------------------
-     RESPONSIVE DESIGN
---------------------------- */
-
-/* Tablets & small laptops under 1000px */
+/* Responsive tweaks */
 @media (max-width: 1000px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 40px;
+    padding: 30px;
   }
-
-  .form-section {
-    max-width: 100%;
-  }
-
+  .form-section,
   .preview-section {
     max-width: 100%;
   }
 }
 
-/* Large Phones (600px and below) */
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
+    letter-spacing: 0.04em;
   }
 
   .form-section,
   .preview-section {
-    padding: 22px 18px;
-    border-radius: 12px;
+    padding: 24px 20px;
+    border-radius: 16px;
   }
 
   #previewPhoto {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
   }
 
   #previewName {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   input[type="text"],
   input[type="file"],
   select {
-    padding: 10px;
-    font-size: 0.95rem;
+    padding: 12px;
+    font-size: 1rem;
   }
 
   button {
-    font-size: 1rem;
-    padding: 10px 16px;
+    font-size: 1.05rem;
+    padding: 12px 18px;
   }
 }
 
-/* Very small phones (400px and below) */
 @media (max-width: 400px) {
   h1 {
     font-size: 1.6rem;
   }
 
   #previewPhoto {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 
   #previewName {
@@ -201,7 +245,7 @@ button {
   input[type="text"],
   input[type="file"],
   select {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   button {
