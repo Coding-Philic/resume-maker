@@ -35,6 +35,7 @@ html2canvas for capturing the resume preview
 jsPDF for generating the PDF file
 
 # Project Structure
+```
 Resume-Builder/
 │
 ├── index.html        Main application file
@@ -45,7 +46,7 @@ Resume-Builder/
 ├── assets/
 │   └── default-photo.png
 └── README.md
-
+```
 # How to Run the Project
 
 Clone the repository:
