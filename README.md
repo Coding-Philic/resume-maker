@@ -1,12 +1,12 @@
-Resume Builder Web Application
+# Resume Builder Web Application
 
 This project is a simple and user-friendly resume builder built using HTML, CSS, and JavaScript. It allows users to create a professional resume directly in the browser without any backend or account requirement. The application provides live preview, theme switching, and PDF export functionality.
 
-Project Overview
+# Project Overview
 
 The Resume Builder helps users enter their personal and professional details, organize them into sections, and instantly see how their resume looks. Once satisfied, the resume can be downloaded as a PDF. The entire process runs on the client side, making it fast and easy to use.
 
-Features
+# Features
 
 Upload a profile photo
 
@@ -22,7 +22,7 @@ Download the resume as a PDF file
 
 No backend or database required
 
-Technologies Used
+# Technologies Used
 
 HTML5 for structure
 
@@ -34,7 +34,7 @@ html2canvas for capturing the resume preview
 
 jsPDF for generating the PDF file
 
-Project Structure
+# Project Structure
 Resume-Builder/
 │
 ├── index.html        Main application file
@@ -46,7 +46,7 @@ Resume-Builder/
 │   └── default-photo.png
 └── README.md
 
-How to Run the Project
+# How to Run the Project
 
 Clone the repository:
 
@@ -57,7 +57,7 @@ Open the index.html file in any modern web browser.
 
 Fill in your details, add sections, choose a theme, and download your resume as a PDF.
 
-Use Cases
+# Use Cases
 
 Students creating their first resume
 
